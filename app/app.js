@@ -22,10 +22,12 @@ angular
       })
       .state('login', {
         url: '/login',
+        controller:'AuthCtrl as authCtrl',
         templateUrl: 'auth/login.html'
       })
       .state('register', {
         url: '/register',
+        controller:'AuthCtrl as authCtrl',
         templateUrl: 'auth/register.html'
       });
     $urlRouterProvider.otherwise('/');
@@ -37,5 +39,5 @@ angular
       messagingSenderId: '747339624327',
     };
     firebase.initializeApp(config);
-  })
-  .constant('FirebaseUrl', '');
+  }
+  .constant('FirebaseUrl', 'https://beauty-salon-50ea7.firebaseio.com'); 
