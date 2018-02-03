@@ -40,4 +40,4 @@ angular
     };
     firebase.initializeApp(config);
   }
-  .constant('FirebaseUrl', 'https://beauty-salon-50ea7.firebaseio.com'); 
+  .constant('FirebaseUrl', 'https://beauty-salon-50ea7.firebaseio.com/'); 
