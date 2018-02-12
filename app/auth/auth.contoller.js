@@ -5,11 +5,12 @@ angular.module('angularfireSlackApp')
         authCtrl.user ={
             email:'',
             password:''
-        }
+        };
 
         authCtrl.login = function(){
             Auth.$signInWithEmailAndPassword(authCtrl.user.email,authCtrl.user.password).then(function (auth) {
                 $state.go('home');
+                
             }, function(error){
                 authCtrl.error = error;
             });
@@ -17,7 +18,7 @@ angular.module('angularfireSlackApp')
 
         authCtrl.register = function () {
             Auth.$createUserWithEmailAndPassword(authCtrl.user.email, authCtrl.user.password).then(function (user) {
-                authCtrl.login();
+                authCtrl.login(user);
             }, function (error) {
                 authCtrl.error = error;
             });

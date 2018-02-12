@@ -39,5 +39,5 @@ angular
       messagingSenderId: '747339624327',
     };
     firebase.initializeApp(config);
-  }
+  })
   .constant('FirebaseUrl', 'https://beauty-salon-50ea7.firebaseio.com/'); 
